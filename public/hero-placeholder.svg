@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#f2e7df"/>
+  <path d="M0 600 C240 480 360 700 600 560 C820 430 960 520 1200 360 L1200 800 L0 800 Z" fill="#f55a00" opacity=".95"/>
+  <path d="M120 190 H1080 V530 H120 Z" fill="#fff7f1"/>
+  <path d="M190 270 H800" stroke="#24110c" stroke-width="18" stroke-linecap="round" opacity=".18"/>
+  <path d="M190 340 H650" stroke="#24110c" stroke-width="18" stroke-linecap="round" opacity=".12"/>
+  <circle cx="940" cy="315" r="78" fill="#f55a00"/>
+  <text x="600" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#5c4038">Replace with tailoring / product image</text>
+</svg>
