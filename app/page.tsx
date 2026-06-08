@@ -7,48 +7,68 @@ import { ArrowRight, MessageCircle, ShoppingCart, X } from "lucide-react";
 const WHATSAPP_NUMBER = "918985529081";
 
 const products = [
-  { id: 1, name: "Nurse Dress - Female", category: "Uniforms", colors: ["Pink", "Blue", "Green", "Purple"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "Rs 625", tag: "Bestseller" },
-  { id: 2, name: "Ward Boy - Payjama", category: "Uniforms", colors: ["Navy Blue", "Grey"], sizes: ["32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "Rs 540", tag: null },
-  { id: 3, name: "Ward Boy - Pant", category: "Uniforms", colors: ["Navy Blue", "Grey"], sizes: ["32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "Rs 680", tag: null },
-  { id: 4, name: "Scrub Suit / OT Wear", category: "OT & Surgical", colors: ["Blue", "Green", "Pink"], sizes: ["32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton - 180 GSM", price: "Rs 395", tag: "Unisex" },
-  { id: 5, name: "Aprons - Full Sleeves", category: "Aprons", colors: ["White"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "Rs 385", tag: null },
-  { id: 6, name: "Aprons - Half Sleeves", category: "Aprons", colors: ["White"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "Rs 325", tag: null },
-  { id: 7, name: "Doctor's Apron (Knee Length)", category: "Aprons", colors: ["White"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "On Request", tag: "Premium" },
-  { id: 8, name: "OT Gown - Cotton", category: "OT & Surgical", colors: ["Green"], sizes: ['Free Size - 48"'], fabric: "Pure Cotton VAT Dyed", price: "Rs 450", tag: null },
-  { id: 9, name: "OT Gown - Terry-Cotton", category: "OT & Surgical", colors: ["Green"], sizes: ['Free Size - 48"'], fabric: "Terry-Cotton", price: "Rs 425", tag: null },
-  { id: 10, name: "OT Gown - Overlapping Cotton", category: "OT & Surgical", colors: ["Green"], sizes: ['Free Size - 48"'], fabric: "Thick Casement Cotton", price: "Rs 525", tag: null },
-  { id: 11, name: "OT Gown - Overlapping Terry", category: "OT & Surgical", colors: ["Green"], sizes: ['Free Size - 48"'], fabric: "Terry-Cotton", price: "Rs 490", tag: null },
-  { id: 12, name: "Ladies / Ayamma Gown", category: "Patient Care", colors: ["Multiple"], sizes: ["S", "M", "L", "XL"], fabric: "Terry-Cotton", price: "Rs 360", tag: null },
-  { id: 13, name: "Nightie / Ayamma Gown", category: "Patient Care", colors: ["Multiple"], sizes: ["S", "M", "L", "XL"], fabric: "Terry-Cotton", price: "Rs 360", tag: null },
-  { id: 14, name: "Patient Gown", category: "Patient Care", colors: ["Blue", "Green", "Maroon", "Purple"], sizes: ["S", "M", "L", "XL"], fabric: "Polyester Viscose - Checks", price: "Rs 290", tag: null },
-  { id: 15, name: "Attendant Gown", category: "Patient Care", colors: ["Blue", "Green", "Maroon", "Purple"], sizes: ["S", "M", "L", "XL"], fabric: "Polyester Viscose - Checks", price: "Rs 320", tag: null },
-  { id: 16, name: "Patient Dress (Shirt + Pant)", category: "Patient Care", colors: ["Blue", "Green", "Maroon", "Purple"], sizes: ["S", "M", "L", "XL"], fabric: "Polyester Viscose", price: "Rs 370", tag: null },
-  { id: 17, name: "Ayamma Sarees - Plain", category: "Sarees", colors: ["Navy Blue", "Maroon", "Sky Blue", "Grey"], sizes: ["Standard"], fabric: "Chiffon / Georgette", price: "Rs 245", tag: null },
-  { id: 18, name: "Receptionist Fancy Sarees", category: "Sarees", colors: ["Multiple"], sizes: ["Standard"], fabric: "Fancy & Formal", price: "On Request", tag: "Premium" },
-  { id: 19, name: "Executive Shirts", category: "Corporate", colors: ["Assorted"], sizes: ["32", "34", "36", "38", "40", "42"], fabric: "Polyester Cotton", price: "Rs 325", tag: null },
-  { id: 20, name: "Safari Suit", category: "Corporate", colors: ["Assorted"], sizes: ["32", "34", "36", "38", "40", "42"], fabric: "Terry-Cotton Blend", price: "Rs 1575", tag: "Premium" },
-  { id: 21, name: "Security Dress - Male", category: "Security", colors: ["Navy Blue", "Sky Blue"], sizes: ["32", "34", "36", "38", "40", "42"], fabric: "Terry-Cotton Blend", price: "Rs 750", tag: null },
-  { id: 22, name: "Security Dress - Female", category: "Security", colors: ["Sky Blue", "Navy Blue"], sizes: ["32", "34", "36", "38", "40", "42"], fabric: "Spun Kurti + Payjama", price: "Rs 570", tag: null },
-  { id: 23, name: "Bedsheet - White Standard", category: "Linen", colors: ["White"], sizes: ['55"x90"'], fabric: "100 TC", price: "Rs 135", tag: null },
-  { id: 24, name: "Bedsheet - White Superior", category: "Linen", colors: ["White"], sizes: ['58"x90"'], fabric: "145 TC", price: "Rs 190", tag: null },
-  { id: 25, name: "Bedsheet - Colour Superior", category: "Linen", colors: ["Blue", "Green", "Pink"], sizes: ['58"x90"'], fabric: "150 TC", price: "Rs 265", tag: null },
-  { id: 26, name: "Blanket - Single", category: "Linen", colors: ["Camel", "Navy Blue", "Maroon", "Brown"], sizes: ["1 KG"], fabric: "Plain Smooth", price: "Rs 265", tag: null },
-  { id: 27, name: "Ortho Linen - Large Towel", category: "Ortho Linen", colors: ["Green"], sizes: ['58"x80"'], fabric: "Pure Cotton Casement", price: "Rs 210", tag: null },
-  { id: 28, name: "Ortho Linen - Medium Towel", category: "Ortho Linen", colors: ["Green"], sizes: ['58"x40"'], fabric: "Pure Cotton Casement", price: "Rs 110", tag: null },
-  { id: 29, name: "Ortho Linen - Small Towel", category: "Ortho Linen", colors: ["Green"], sizes: ['29"x29"'], fabric: "Pure Cotton Casement", price: "Rs 60", tag: null },
-  { id: 30, name: "Ortho Linen - Hand Towel", category: "Ortho Linen", colors: ["Green", "Navy Blue", "Sky Blue"], sizes: ['14"x14"'], fabric: "Pure Cotton Casement", price: "Rs 15", tag: null },
-  { id: 31, name: "OT Wrapping Towel - Small", category: "OT & Surgical", colors: ["Green", "Navy Blue", "Sky Blue"], sizes: ['29"x29"'], fabric: "Pure Cotton Casement", price: "Rs 65", tag: null },
-  { id: 32, name: "OT Wrapping Towel - Medium", category: "OT & Surgical", colors: ["Green", "Navy Blue", "Sky Blue"], sizes: ['40"x58"'], fabric: "Pure Cotton Casement", price: "Rs 145", tag: null },
-  { id: 33, name: "Draw Sheets / Surgical Drapes", category: "OT & Surgical", colors: ["Green", "Navy Blue", "Sky Blue"], sizes: ['58"x58"'], fabric: "Pure Cotton Casement", price: "Rs 179", tag: null },
-  { id: 34, name: "Hospital Curtains", category: "Curtains & Blinds", colors: ["Blue", "Green", "Cream", "White"], sizes: ["Rs 14/sqft"], fabric: "Stripes/Zigzag + Net", price: "Rs 14/sqft", tag: null },
-  { id: 35, name: "Net (Square / Oval)", category: "Curtains & Blinds", colors: ["Cream", "White"], sizes: ["Square", "Oval"], fabric: "Net Cloth", price: "Rs 585", tag: null },
-  { id: 36, name: "Curtain Track Runners", category: "Curtains & Blinds", colors: ["White"], sizes: ["Standard"], fabric: "Best Quality", price: "Rs 135", tag: null },
-  { id: 37, name: "Curtain Runner Hooks", category: "Curtains & Blinds", colors: ["Silver"], sizes: ["Per Piece"], fabric: "Metal", price: "Rs 3.50/pc", tag: null },
-  { id: 38, name: "Curtain Fittings Set", category: "Curtains & Blinds", colors: ["White"], sizes: ["Per Set"], fabric: "Best Quality", price: "Rs 45/set", tag: null },
-  { id: 39, name: "Vertical / Roller / Roman Blinds", category: "Curtains & Blinds", colors: ["Various"], sizes: ["Custom"], fabric: "All Varieties", price: "On Request", tag: null },
-  { id: 40, name: "Bath Mats / Door Mats", category: "Linen", colors: ["Various"], sizes: ["Standard"], fabric: "Best Quality", price: "On Request", tag: null },
-  { id: 41, name: "Cloth Mask", category: "PPE", colors: ["Various"], sizes: ["Free Size"], fabric: "Terry-Cotton Single Layer", price: "On Request", tag: null },
-  { id: 42, name: "Disposable Isolation Gowns", category: "PPE", colors: ["Blue"], sizes: ["Free Size"], fabric: "Non-Woven 40 GSM", price: "Rs 32/pc", tag: null },
+  { id: 1, name: "Hospital Nurse Uniform", category: "Uniforms", colors: ["White", "Pink", "Blue", "Green"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Cotton + Poly Cotton", price: "Rs 550", tag: null },
+  { id: 2, name: "Plain Nurse Wear Hospital Uniform For Nurses", category: "Uniforms", colors: ["White", "Pink", "Blue", "Green"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Cotton + Poly Cotton", price: "Rs 550", tag: null },
+  { id: 3, name: "PVC Hospital Plastic Apron", category: "Aprons", colors: ["White", "Blue"], sizes: ["Free Size"], fabric: "LDPE Plastic / Disposable Safety Apron", price: "Rs 395", tag: null },
+  { id: 4, name: "Doctor Scrub Suit", category: "OT & Surgical", colors: ["Blue", "Green", "Pink"], sizes: ["32", "34", "36", "38", "40", "42", "44"], fabric: "Poly Cotton / Hospital-Grade Scrub Fabric", price: "Rs 695/set", tag: null },
+  { id: 5, name: "Disposable Plastic Apron", category: "PPE", colors: ["White", "Blue"], sizes: ["Free Size"], fabric: "Disposable Plastic / LDPE Material", price: "Rs 10.50", tag: null },
+  { id: 6, name: "Hospital Nurse Dress", category: "Uniforms", colors: ["White", "Pink", "Blue", "Green"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Polyester Blend Hospital Uniform Fabric", price: "Rs 685/set", tag: null },
+  { id: 7, name: "Unisex Full Length Patient Gowns", category: "Patient Care", colors: ["Blue", "Green", "White"], sizes: ["S", "M", "L", "XL"], fabric: "Cotton-Polyester Blended Patient Gown Fabric", price: "Rs 385", tag: "Unisex" },
+  { id: 8, name: "Disposable Isolation Gowns", category: "PPE", colors: ["White", "Blue"], sizes: ["Free Size"], fabric: "Non-Woven Disposable Medical Fabric", price: "Rs 58", tag: null },
+  { id: 9, name: "Housekeeping Uniform", category: "Uniforms", colors: ["Blue", "Green", "Grey"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Polyester-Cotton Uniform Fabric", price: "Rs 625/set", tag: null },
+  { id: 10, name: "Full Sleeves Medical Apron", category: "Aprons", colors: ["White"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Poly Cotton Apron Fabric", price: "Rs 295", tag: null },
+  { id: 11, name: "Half Sleeve Medical Apron", category: "Aprons", colors: ["White"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Poly Cotton Apron Fabric", price: "Rs 295", tag: null },
+  { id: 12, name: "Non Woven Disposable Gown", category: "PPE", colors: ["White", "Blue"], sizes: ["Free Size"], fabric: "Non-Woven PP Medical Disposable Fabric", price: "Rs 58", tag: null },
+  { id: 13, name: "Normal OT Gown", category: "OT & Surgical", colors: ["Green", "Blue"], sizes: ['Free Size - 48"'], fabric: "OT-Grade Cotton/Poly-Viscose Hospital Fabric", price: "Rs 495", tag: null },
+  { id: 14, name: "Overlapping OT Gown", category: "OT & Surgical", colors: ["Green", "Blue"], sizes: ['Free Size - 48"'], fabric: "OT-Grade Cotton/Poly-Viscose Hospital Fabric", price: "Rs 485", tag: null },
+  { id: 15, name: "Patient Gown", category: "Patient Care", colors: ["Blue", "Green", "Maroon", "Purple"], sizes: ["S", "M", "L", "XL"], fabric: "Cotton-Polyester Blended Patient Wear Fabric", price: "Rs 395", tag: null },
+  { id: 16, name: "Attendant Disposable Gown", category: "Patient Care", colors: ["White", "Blue"], sizes: ["Free Size"], fabric: "Disposable Non-Woven Medical Fabric", price: "Rs 325", tag: null },
+  { id: 17, name: "Embroidery", category: "Services", colors: ["Custom"], sizes: ["Per Design"], fabric: "Cotton + Poly Cotton Base", price: "Rs 20/Design", tag: null },
+  { id: 18, name: "Hospital Executive Pant And Shirt Uniform", category: "Corporate", colors: ["White", "Blue", "Grey"], sizes: ["32", "34", "36", "38", "40", "42", "44"], fabric: "Poly Cotton", price: "Rs 700/set", tag: null },
+  { id: 19, name: "Receptionist Uniform Sarees", category: "Sarees", colors: ["Multiple"], sizes: ["Standard"], fabric: "Polyester-Viscose Saree Fabric With Smooth Drape", price: "Rs 480", tag: null },
+  { id: 20, name: "Printed Uniform Saree Crepee", category: "Sarees", colors: ["Multiple"], sizes: ["Standard"], fabric: "Printed Crepe Fabric", price: "Rs 390", tag: null },
+  { id: 21, name: "Nurse Dress - Female", category: "Uniforms", colors: ["Pink", "Blue", "Green", "Purple"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "Rs 625", tag: "Bestseller" },
+  { id: 22, name: "Ward Boy - Payjama", category: "Uniforms", colors: ["Navy Blue", "Grey"], sizes: ["32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "Rs 540", tag: null },
+  { id: 23, name: "Ward Boy - Pant", category: "Uniforms", colors: ["Navy Blue", "Grey"], sizes: ["32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "Rs 680", tag: null },
+  { id: 24, name: "Scrub Suit / OT Wear", category: "OT & Surgical", colors: ["Blue", "Green", "Pink"], sizes: ["32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton - 180 GSM", price: "Rs 395", tag: "Unisex" },
+  { id: 25, name: "Aprons - Full Sleeves", category: "Aprons", colors: ["White"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "Rs 385", tag: null },
+  { id: 26, name: "Aprons - Half Sleeves", category: "Aprons", colors: ["White"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "Rs 325", tag: null },
+  { id: 27, name: "Doctor's Apron (Knee Length)", category: "Aprons", colors: ["White"], sizes: ["28", "30", "32", "34", "36", "38", "40", "42", "44"], fabric: "Terry-Cotton", price: "On Request", tag: "Premium" },
+  { id: 28, name: "OT Gown - Cotton", category: "OT & Surgical", colors: ["Green"], sizes: ['Free Size - 48"'], fabric: "Pure Cotton VAT Dyed", price: "Rs 450", tag: null },
+  { id: 29, name: "OT Gown - Terry-Cotton", category: "OT & Surgical", colors: ["Green"], sizes: ['Free Size - 48"'], fabric: "Terry-Cotton", price: "Rs 425", tag: null },
+  { id: 30, name: "OT Gown - Overlapping Cotton", category: "OT & Surgical", colors: ["Green"], sizes: ['Free Size - 48"'], fabric: "Thick Casement Cotton", price: "Rs 525", tag: null },
+  { id: 31, name: "OT Gown - Overlapping Terry", category: "OT & Surgical", colors: ["Green"], sizes: ['Free Size - 48"'], fabric: "Terry-Cotton", price: "Rs 490", tag: null },
+  { id: 32, name: "Ladies / Ayamma Gown", category: "Patient Care", colors: ["Multiple"], sizes: ["S", "M", "L", "XL"], fabric: "Terry-Cotton", price: "Rs 360", tag: null },
+  { id: 33, name: "Nightie / Ayamma Gown", category: "Patient Care", colors: ["Multiple"], sizes: ["S", "M", "L", "XL"], fabric: "Terry-Cotton", price: "Rs 360", tag: null },
+  { id: 34, name: "Patient Gown (Checks)", category: "Patient Care", colors: ["Blue", "Green", "Maroon", "Purple"], sizes: ["S", "M", "L", "XL"], fabric: "Polyester Viscose - Checks", price: "Rs 290", tag: null },
+  { id: 35, name: "Attendant Gown", category: "Patient Care", colors: ["Blue", "Green", "Maroon", "Purple"], sizes: ["S", "M", "L", "XL"], fabric: "Polyester Viscose - Checks", price: "Rs 320", tag: null },
+  { id: 36, name: "Patient Dress (Shirt + Pant)", category: "Patient Care", colors: ["Blue", "Green", "Maroon", "Purple"], sizes: ["S", "M", "L", "XL"], fabric: "Polyester Viscose", price: "Rs 370", tag: null },
+  { id: 37, name: "Ayamma Sarees - Plain", category: "Sarees", colors: ["Navy Blue", "Maroon", "Sky Blue", "Grey"], sizes: ["Standard"], fabric: "Chiffon / Georgette", price: "Rs 245", tag: null },
+  { id: 38, name: "Receptionist Fancy Sarees", category: "Sarees", colors: ["Multiple"], sizes: ["Standard"], fabric: "Fancy & Formal", price: "On Request", tag: "Premium" },
+  { id: 39, name: "Executive Shirts", category: "Corporate", colors: ["Assorted"], sizes: ["32", "34", "36", "38", "40", "42"], fabric: "Polyester Cotton", price: "Rs 325", tag: null },
+  { id: 40, name: "Safari Suit", category: "Corporate", colors: ["Assorted"], sizes: ["32", "34", "36", "38", "40", "42"], fabric: "Terry-Cotton Blend", price: "Rs 1575", tag: "Premium" },
+  { id: 41, name: "Security Dress - Male", category: "Security", colors: ["Navy Blue", "Sky Blue"], sizes: ["32", "34", "36", "38", "40", "42"], fabric: "Terry-Cotton Blend", price: "Rs 750", tag: null },
+  { id: 42, name: "Security Dress - Female", category: "Security", colors: ["Sky Blue", "Navy Blue"], sizes: ["32", "34", "36", "38", "40", "42"], fabric: "Spun Kurti + Payjama", price: "Rs 570", tag: null },
+  { id: 43, name: "Bedsheet - White Standard", category: "Linen", colors: ["White"], sizes: ['55"x90"'], fabric: "100 TC", price: "Rs 135", tag: null },
+  { id: 44, name: "Bedsheet - White Superior", category: "Linen", colors: ["White"], sizes: ['58"x90"'], fabric: "145 TC", price: "Rs 190", tag: null },
+  { id: 45, name: "Bedsheet - Colour Superior", category: "Linen", colors: ["Blue", "Green", "Pink"], sizes: ['58"x90"'], fabric: "150 TC", price: "Rs 265", tag: null },
+  { id: 46, name: "Blanket - Single", category: "Linen", colors: ["Camel", "Navy Blue", "Maroon", "Brown"], sizes: ["1 KG"], fabric: "Plain Smooth", price: "Rs 265", tag: null },
+  { id: 47, name: "Ortho Linen - Large Towel", category: "Ortho Linen", colors: ["Green"], sizes: ['58"x80"'], fabric: "Pure Cotton Casement", price: "Rs 210", tag: null },
+  { id: 48, name: "Ortho Linen - Medium Towel", category: "Ortho Linen", colors: ["Green"], sizes: ['58"x40"'], fabric: "Pure Cotton Casement", price: "Rs 110", tag: null },
+  { id: 49, name: "Ortho Linen - Small Towel", category: "Ortho Linen", colors: ["Green"], sizes: ['29"x29"'], fabric: "Pure Cotton Casement", price: "Rs 60", tag: null },
+  { id: 50, name: "Ortho Linen - Hand Towel", category: "Ortho Linen", colors: ["Green", "Navy Blue", "Sky Blue"], sizes: ['14"x14"'], fabric: "Pure Cotton Casement", price: "Rs 15", tag: null },
+  { id: 51, name: "OT Wrapping Towel - Small", category: "OT & Surgical", colors: ["Green", "Navy Blue", "Sky Blue"], sizes: ['29"x29"'], fabric: "Pure Cotton Casement", price: "Rs 65", tag: null },
+  { id: 52, name: "OT Wrapping Towel - Medium", category: "OT & Surgical", colors: ["Green", "Navy Blue", "Sky Blue"], sizes: ['40"x58"'], fabric: "Pure Cotton Casement", price: "Rs 145", tag: null },
+  { id: 53, name: "Draw Sheets / Surgical Drapes", category: "OT & Surgical", colors: ["Green", "Navy Blue", "Sky Blue"], sizes: ['58"x58"'], fabric: "Pure Cotton Casement", price: "Rs 179", tag: null },
+  { id: 54, name: "Hospital Curtains", category: "Curtains & Blinds", colors: ["Blue", "Green", "Cream", "White"], sizes: ["Rs 14/sqft"], fabric: "Stripes/Zigzag + Net", price: "Rs 14/sqft", tag: null },
+  { id: 55, name: "Net (Square / Oval)", category: "Curtains & Blinds", colors: ["Cream", "White"], sizes: ["Square", "Oval"], fabric: "Net Cloth", price: "Rs 585", tag: null },
+  { id: 56, name: "Curtain Track Runners", category: "Curtains & Blinds", colors: ["White"], sizes: ["Standard"], fabric: "Best Quality", price: "Rs 135", tag: null },
+  { id: 57, name: "Curtain Runner Hooks", category: "Curtains & Blinds", colors: ["Silver"], sizes: ["Per Piece"], fabric: "Metal", price: "Rs 3.50/pc", tag: null },
+  { id: 58, name: "Curtain Fittings Set", category: "Curtains & Blinds", colors: ["White"], sizes: ["Per Set"], fabric: "Best Quality", price: "Rs 45/set", tag: null },
+  { id: 59, name: "Vertical / Roller / Roman Blinds", category: "Curtains & Blinds", colors: ["Various"], sizes: ["Custom"], fabric: "All Varieties", price: "On Request", tag: null },
+  { id: 60, name: "Bath Mats / Door Mats", category: "Linen", colors: ["Various"], sizes: ["Standard"], fabric: "Best Quality", price: "On Request", tag: null },
+  { id: 61, name: "Cloth Mask", category: "PPE", colors: ["Various"], sizes: ["Free Size"], fabric: "Terry-Cotton Single Layer", price: "On Request", tag: null },
+  { id: 62, name: "Disposable Isolation Gowns (40 GSM)", category: "PPE", colors: ["Blue"], sizes: ["Free Size"], fabric: "Non-Woven 40 GSM", price: "Rs 32/pc", tag: null },
 ];
 
 const categories = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
@@ -75,6 +95,86 @@ const hospitalColours = [
   { name: "Grey", className: "bg-gray-400" },
 ];
 
+const productImages: Record<number, string[]> = {
+  21: [
+    "/nurse%20dress%20(1).jpeg",
+    "/nurse%20dress%20(2).jpeg",
+    "/nurse%20dress%20(3).jpeg",
+    "/nurse%20dress%20(4).jpeg",
+    "/nurse%20dress%20(5).jpeg",
+    "/nurse%20dress%20(6).jpeg",
+    "/nurse%20dress%20(7).jpeg",
+  ],
+  22: [
+    "/WARDBOY%20(1).jpeg",
+    "/WARDBOY%20(2).jpeg",
+    "/WARDBOY%20(3).jpeg",
+    "/WARDBOY%20(4).jpeg",
+    "/WARDBOY%20(5).jpeg",
+  ],
+  23: [
+    "/WARDBOY%20(1).jpeg",
+    "/WARDBOY%20(2).jpeg",
+    "/WARDBOY%20(3).jpeg",
+    "/WARDBOY%20(4).jpeg",
+    "/WARDBOY%20(5).jpeg",
+  ],
+  // Doctor Scrub Suit (new)
+  4: [
+    "/scrubs%20(1).jpeg",
+    "/scrubs%20(2).jpeg",
+    "/scrubs%20(3).jpeg",
+    "/scrubs%20(4).jpeg",
+    "/scrubs%20(5).jpeg",
+  ],
+  // Scrub Suit / OT Wear (original)
+  24: [
+    "/scrubs%20(1).jpeg",
+    "/scrubs%20(2).jpeg",
+    "/scrubs%20(3).jpeg",
+    "/scrubs%20(4).jpeg",
+    "/scrubs%20(5).jpeg",
+  ],
+  // Apron products (new)
+  3: [
+    "/aprons%20(1).jpeg",
+    "/aprons%20(2).jpeg",
+    "/aprons%20(3).jpeg",
+    "/aprons%20(4).jpeg",
+  ],
+  10: [
+    "/aprons%20(1).jpeg",
+    "/aprons%20(2).jpeg",
+    "/aprons%20(3).jpeg",
+    "/aprons%20(4).jpeg",
+  ],
+  11: [
+    "/aprons%20(1).jpeg",
+    "/aprons%20(2).jpeg",
+    "/aprons%20(3).jpeg",
+    "/aprons%20(4).jpeg",
+  ],
+  // Apron products (original)
+  25: [
+    "/aprons%20(1).jpeg",
+    "/aprons%20(2).jpeg",
+    "/aprons%20(3).jpeg",
+    "/aprons%20(4).jpeg",
+  ],
+  26: [
+    "/aprons%20(1).jpeg",
+    "/aprons%20(2).jpeg",
+    "/aprons%20(3).jpeg",
+    "/aprons%20(4).jpeg",
+  ],
+  27: [
+    "/aprons%20(1).jpeg",
+    "/aprons%20(2).jpeg",
+    "/aprons%20(3).jpeg",
+    "/aprons%20(4).jpeg",
+  ],
+};
+
 type Product = (typeof products)[number];
 type SizeQuantities = Record<string, number>;
 type CartItem = {
@@ -83,6 +183,43 @@ type CartItem = {
   quantities: SizeQuantities;
 };
 type CartItemWithProduct = CartItem & { product: Product };
+
+function ProductImageCarousel({ product }: { product: Product }) {
+  const [idx, setIdx] = useState(0);
+  const images = productImages[product.id];
+
+  useEffect(() => {
+    if (!images || images.length <= 1) return;
+    const timer = setInterval(() => setIdx((i) => (i + 1) % images.length), 6000);
+    return () => clearInterval(timer);
+  }, [images]);
+
+  if (!images || images.length === 0) {
+    return <Image src="/product-placeholder.svg" alt={`${product.name} placeholder`} width={800} height={600} className="h-full w-full object-cover opacity-90 transition group-hover:scale-[1.03]" />;
+  }
+
+  function go(dir: 1 | -1, e: React.MouseEvent) {
+    e.stopPropagation();
+    setIdx((i) => (i + dir + images.length) % images.length);
+  }
+
+  return (
+    <>
+      <Image src={images[idx]} alt={`${product.name} ${idx + 1}`} width={800} height={1000} className="h-full w-full object-contain opacity-90 transition group-hover:scale-[1.03]" />
+      {images.length > 1 && (
+        <>
+          <button type="button" onClick={(e) => go(-1, e)} className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/60 px-2 py-1 text-lg text-white hover:bg-black/80">‹</button>
+          <button type="button" onClick={(e) => go(1, e)} className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/60 px-2 py-1 text-lg text-white hover:bg-black/80">›</button>
+          <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 gap-1">
+            {images.map((_, i) => (
+              <span key={i} className={`h-1.5 w-1.5 rounded-full ${i === idx ? "bg-white" : "bg-white/40"}`} />
+            ))}
+          </div>
+        </>
+      )}
+    </>
+  );
+}
 
 function createEmptyQuantities(product: Product) {
   return Object.fromEntries(product.sizes.map((size) => [size, 0])) as SizeQuantities;
@@ -302,7 +439,6 @@ export default function Home() {
           </div>
         </div>
       </nav>
-
       {configuringProduct && (
         <div className="fixed inset-0 z-[60] flex items-end justify-center bg-black/58 px-4 py-4 backdrop-blur-sm sm:items-center" role="dialog" aria-modal="true" aria-labelledby="order-panel-title">
           <form
@@ -499,8 +635,8 @@ export default function Home() {
                 const cartItem = cart.find((item) => item.productId === product.id);
                 return (
                   <article key={product.id} className="group overflow-hidden rounded-lg border border-white/[0.08] bg-[#101010] transition hover:border-[#f55a00]/50 hover:bg-[#141414]">
-                    <div className="relative aspect-[4/3] bg-[#171717]">
-                      <Image src="/product-placeholder.svg" alt={`${product.name} placeholder`} width={800} height={600} className="h-full w-full object-cover opacity-90 transition group-hover:scale-[1.03]" />
+                    <div className="relative aspect-[3/4] bg-[#171717]">
+                      <ProductImageCarousel product={product} />
                       {product.tag && <span className="absolute right-3 top-3 rounded-full bg-[#f55a00] px-3 py-1 text-[10px] font-bold text-white">{product.tag}</span>}
                     </div>
                     <div className="p-5">
