@@ -142,7 +142,7 @@ const productImages: Record<number, string[]> = {
   // Executive Shirts
   39: ["/uniforms/Hospital%20Officials%20executive%20shirt.jpeg"],
   // Safari Suit
-  40: ["/uniforms/Hospital%20Executive%20pant%20%26%20shirt.jpeg", "/uniforms/Hospital%20Executive%20pant%20%26%20shirt1.jpeg"],
+  40: ["/uniforms/House%20keeping%20Uniforms%20(1).png"],
   // Security Dress - Male
   41: ["/uniforms/security%20dress%20(2).jpeg"],
   // Security Dress - Female
