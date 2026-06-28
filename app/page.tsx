@@ -85,50 +85,104 @@ const hospitalColours = [
 ];
 
 const productImages: Record<number, string[]> = {
-  21: [
-    "/nurse%20dress%20(1).jpeg",
-    "/nurse%20dress%20(2).jpeg",
-    "/nurse%20dress%20(3).jpeg",
-    "/nurse%20dress%20(4).jpeg",
-    "/nurse%20dress%20(5).jpeg",
-    "/nurse%20dress%20(6).jpeg",
-    "/nurse%20dress%20(7).jpeg",
-  ],
-  23: [
-    "/WARDBOY%20(1).jpeg",
-    "/WARDBOY%20(2).jpeg",
-    "/WARDBOY%20(3).jpeg",
-    "/WARDBOY%20(4).jpeg",
-    "/WARDBOY%20(5).jpeg",
-  ],
-  // Doctor Scrub Suit (new)
-  4: [
-    "/scrubs%20(1).jpeg",
-    "/scrubs%20(2).jpeg",
-    "/scrubs%20(3).jpeg",
-    "/scrubs%20(4).jpeg",
-    "/scrubs%20(5).jpeg",
-  ],
-  // Scrub Suit / OT Wear (original)
-  24: [
-    "/scrubs%20(1).jpeg",
-    "/scrubs%20(2).jpeg",
-    "/scrubs%20(3).jpeg",
-    "/scrubs%20(4).jpeg",
-    "/scrubs%20(5).jpeg",
-  ],
-  3: [
-    "/aprons%20(1).jpeg",
-    "/aprons%20(2).jpeg",
-    "/aprons%20(3).jpeg",
-    "/aprons%20(4).jpeg",
-  ],
-  27: [
-    "/aprons%20(1).jpeg",
-    "/aprons%20(2).jpeg",
-    "/aprons%20(3).jpeg",
-    "/aprons%20(4).jpeg",
-  ],
+  // Hospital Nurse Uniform
+  1: ["/uniforms/nurseuniforms%20(1).jpeg", "/uniforms/nurseuniforms%20(2).jpeg", "/uniforms/nurseuniforms%20(3).jpeg", "/uniforms/nurseuniforms%20(4).jpeg", "/uniforms/nurseuniforms%20(5).jpeg"],
+  // PVC Hospital Plastic Apron
+  3: ["/uniforms/aprons%20(1).jpeg", "/uniforms/aprons%20(2).jpeg", "/uniforms/aprons%20(3).jpeg", "/uniforms/aprons%20(4).jpeg", "/uniforms/aprons%20(5).jpeg", "/uniforms/aprons%20(6).jpeg", "/uniforms/aprons%20(7).jpeg", "/uniforms/aprons%20(8).jpeg"],
+  // Doctor Scrub Suit
+  4: ["/uniforms/scrubsuit%20(1).jpeg", "/uniforms/scrubsuit%20(2).jpeg", "/uniforms/scrubsuit%20(3).jpeg", "/uniforms/scrubsuit%20(4).jpeg", "/uniforms/scrubsuit%20(5).jpeg"],
+  // Unisex Full Length Patient Gowns
+  7: ["/uniforms/Hospital%20Patient%20Gowns%20(1).jpeg", "/uniforms/Hospital%20Patient%20Gowns%20(2).jpeg", "/uniforms/Hospital%20Patient%20Gowns%20(3).jpeg", "/uniforms/Hospital%20Patient%20Gowns%20(4).jpeg", "/uniforms/Hospital%20Patient%20Gowns%20(5).jpeg", "/uniforms/Hospital%20Patient%20Gowns%20(6).jpeg", "/uniforms/Hospital%20Patient%20Gowns%20(7).jpeg"],
+  // Disposable Isolation Gowns
+  8: ["/uniforms/Disposable%20Isolation%20Gowns%20(1).jpeg", "/uniforms/Disposable%20Isolation%20Gowns%20(2).jpeg"],
+  // Housekeeping Uniform
+  9: ["/uniforms/House%20keeping%20Uniforms%20(2).jpeg", "/uniforms/House%20keeping%20Uniforms%20(3).jpeg", "/uniforms/House%20keeping%20Uniforms%20(4).jpeg", "/uniforms/House%20keeping%20Uniforms%20(5).jpeg", "/uniforms/House%20keeping%20Uniforms%20(6).jpeg"],
+  // Non Woven Disposable Gown
+  12: ["/uniforms/Non%20Woven%20Disposable%20Gown.jpeg"],
+  // Normal OT Gown
+  13: ["/uniforms/Normal%20OT%20Gown.jpeg"],
+  // Overlapping OT Gown
+  14: ["/uniforms/Overlapping%20OT%20Gown.jpeg"],
+  // Patient Gown
+  15: ["/uniforms/Hospital%20Patient%20Gowns%20(1).jpeg", "/uniforms/Hospital%20Patient%20Gowns%20(2).jpeg", "/uniforms/Hospital%20Patient%20Gowns%20(3).jpeg", "/uniforms/Hospital%20Patient%20Gowns%20(4).jpeg"],
+  // Attendant Disposable Gown
+  16: ["/uniforms/Disposable%20Isolation%20Gowns%20(1).jpeg", "/uniforms/Disposable%20Isolation%20Gowns%20(2).jpeg"],
+  // Embroidery
+  17: ["/uniforms/Embroidery%20(1).jpeg", "/uniforms/Embroidery%20(2).jpeg", "/uniforms/Embroidery%20(3).jpeg"],
+  // Hospital Executive Pant And Shirt
+  18: ["/uniforms/Hospital%20Executive%20pant%20%26%20shirt.jpeg", "/uniforms/Hospital%20Executive%20pant%20%26%20shirt1.jpeg", "/uniforms/Hospital%20Officials%20executive%20shirt.jpeg"],
+  // Receptionist Uniform Sarees
+  19: ["/uniforms/Reception%20Uniform%20Sarees..jpeg"],
+  // Printed Uniform Saree Crepee
+  20: ["/uniforms/Printed%20uniform%20saree%20crepee.jpeg"],
+  // Nurse Dress - Female
+  21: ["/nurse%20dress%20(1).jpeg", "/nurse%20dress%20(2).jpeg", "/nurse%20dress%20(3).jpeg", "/nurse%20dress%20(4).jpeg", "/nurse%20dress%20(5).jpeg", "/nurse%20dress%20(6).jpeg", "/nurse%20dress%20(7).jpeg"],
+  // Ward Boy - Pair
+  23: ["/WARDBOY%20(1).jpeg", "/WARDBOY%20(2).jpeg", "/WARDBOY%20(3).jpeg", "/WARDBOY%20(4).jpeg", "/WARDBOY%20(5).jpeg"],
+  // Scrub Suit / OT Wear
+  24: ["/uniforms/scrubsuit%20(1).jpeg", "/uniforms/scrubsuit%20(2).jpeg", "/uniforms/scrubsuit%20(3).jpeg", "/uniforms/scrubsuit%20(4).jpeg", "/uniforms/scrubsuit%20(5).jpeg"],
+  // Doctor's Apron (Knee Length)
+  27: ["/uniforms/aprons%20(1).jpeg", "/uniforms/aprons%20(2).jpeg", "/uniforms/aprons%20(3).jpeg", "/uniforms/aprons%20(4).jpeg"],
+  // OT Gown - Cotton
+  28: ["/uniforms/Normal%20OT%20Gown.jpeg"],
+  // OT Gown - Terry-Cotton
+  29: ["/uniforms/Normal%20OT%20Gown.jpeg"],
+  // OT Gown - Overlapping Cotton
+  30: ["/uniforms/OT%20Gown%20-%20Overlapping%20Cotton%20(1).jpeg", "/uniforms/OT%20Gown%20-%20Overlapping%20Cotton%20(2).jpeg", "/uniforms/OT%20Gown%20-%20Overlapping%20Cotton%20(3).jpeg", "/uniforms/OT%20Gown%20-%20Overlapping%20Cotton.jpeg"],
+  // Ladies / Ayamma Gown
+  32: ["/uniforms/Ladies%20Ayamma%20Gown%20(1).jpeg", "/uniforms/Ladies%20Ayamma%20Gown%20(2).jpeg"],
+  // Nightie / Ayamma Gown
+  33: ["/uniforms/Ladies%20Ayamma%20Gown%20(1).jpeg", "/uniforms/Ladies%20Ayamma%20Gown%20(2).jpeg"],
+  // Patient Gown (Checks)
+  34: ["/uniforms/Hospital%20Patient%20Gowns%20(5).jpeg", "/uniforms/Hospital%20Patient%20Gowns%20(6).jpeg", "/uniforms/Hospital%20Patient%20Gowns%20(7).jpeg"],
+  // Ayamma Sarees - Plain
+  37: ["/uniforms/Ayamma%20Saree.jpeg"],
+  // Receptionist Fancy Sarees
+  38: ["/uniforms/Reception%20Uniform%20Sarees..jpeg"],
+  // Executive Shirts
+  39: ["/uniforms/Hospital%20Officials%20executive%20shirt.jpeg"],
+  // Safari Suit
+  40: ["/uniforms/Hospital%20Executive%20pant%20%26%20shirt.jpeg", "/uniforms/Hospital%20Executive%20pant%20%26%20shirt1.jpeg"],
+  // Security Dress - Male
+  41: ["/uniforms/security%20dress%20(2).jpeg"],
+  // Security Dress - Female
+  42: ["/uniforms/security%20dress%20female%20(1).jpeg", "/uniforms/security%20dress%20female%20(2).jpeg"],
+  // Bedsheet - White Standard
+  43: ["/uniforms/Bedsheet%20-%20White%20Standard.jpeg"],
+  // Bedsheet - Poly Cotton
+  44: ["/uniforms/Bedsheet%20-%20Poly%20Cotton.jpeg", "/uniforms/Bedsheet%20-%20Poly%20Cotton1.jpeg"],
+  // Bedsheet - Colour Superior
+  45: ["/uniforms/bedsheet%20colour%20superior.jpeg"],
+  // Blanket - Single
+  46: ["/uniforms/Hospital%20wool%20blanket.jpeg", "/uniforms/Merino%20wool%20Blankets%201.jpeg", "/uniforms/merino%20wool%20blankets.jpeg", "/uniforms/Plain%20fleece%20blanket%20-%20single.jpeg"],
+  // Ortho Linen - Large Towel
+  47: ["/uniforms/Ortho%20linen%20-%20larger%20towel.jpeg"],
+  // Ortho Linen - Medium Towel
+  48: ["/uniforms/Ortho%20linen%20-%20Medium%20Towel.jpeg"],
+  // Ortho Linen - Small Towel
+  49: ["/uniforms/Ortho%20linen%20-%20Small%20Towel.jpeg"],
+  // Ortho Linen - Hole Towel
+  50: ["/uniforms/Ortho%20linen%20-%20Hole%20Towel.jpeg"],
+  // OT Wrapping Towel - Small
+  51: ["/uniforms/ot%20wrapping%20towels%20(1).jpeg", "/uniforms/ot%20wrapping%20towels%20(2).jpeg", "/uniforms/OT%20wrapping%20Towels..jpeg"],
+  // OT Wrapping Towel - Medium
+  52: ["/uniforms/ot%20wrapping%20towels%20(1).jpeg", "/uniforms/ot%20wrapping%20towels%20(2).jpeg", "/uniforms/OT%20wrapping%20Towels..jpeg"],
+  // Draw Sheets / Surgical Drapes
+  53: ["/uniforms/Draw%20sheets.jpeg"],
+  // Hospital Curtains
+  54: ["/uniforms/Hospital%20Curtains%20(1).jpeg", "/uniforms/Hospital%20Curtains%20(2).jpeg", "/uniforms/Hospital%20Curtains%20(3).jpeg", "/uniforms/Hospital%20Curtains%20(4).jpeg", "/uniforms/Hospital%20Curtains%20(5).jpeg", "/uniforms/Hospital%20Curtains%20(6).jpeg", "/uniforms/Hospital%20Curtains%20(7).jpeg"],
+  // Net (Square / Oval)
+  55: ["/uniforms/Net%20Square%20Oval.jpeg"],
+  // Curtain Track Runners
+  56: ["/uniforms/Curtains%20Track%20Runners.jpeg"],
+  // Curtain Runner Hooks
+  57: ["/uniforms/Curtain%20Runner%20Hooks.jpeg"],
+  // Curtain Fittings Set
+  58: ["/uniforms/Curtain%20Fittings%20Set.jpeg"],
+  // Cloth Mask
+  61: ["/uniforms/Cloth%20mask%20(1).jpeg", "/uniforms/Cloth%20mask%20(2).jpeg"],
+  // Disposable Isolation Gowns (40 GSM)
+  62: ["/uniforms/Disposable%20Isolation%20Gowns%20(1).jpeg", "/uniforms/Disposable%20Isolation%20Gowns%20(2).jpeg"],
 };
 
 type Product = (typeof products)[number];
@@ -161,7 +215,7 @@ function ProductImageCarousel({ product }: { product: Product }) {
 
   return (
     <>
-      <Image src={images[idx]} alt={`${product.name} ${idx + 1}`} width={800} height={1000} className="h-full w-full object-contain opacity-90 transition group-hover:scale-[1.03]" />
+      <Image src={images[idx]} alt={`${product.name} ${idx + 1}`} width={800} height={1000} className="h-full w-full object-cover opacity-90 transition group-hover:scale-[1.03]" />
       {images.length > 1 && (
         <>
           <button type="button" onClick={(e) => go(-1, e)} className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/60 px-2 py-1 text-lg text-white hover:bg-black/80">‹</button>
