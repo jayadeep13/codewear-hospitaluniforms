@@ -74,11 +74,11 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/favicon.ico": {
+    "/favicon1.ico": {
       "initialHeaders": {
         "cache-control": "public, max-age=0, must-revalidate",
         "content-type": "image/x-icon",
-        "x-next-cache-tags": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/favicon1.ico/layout,_N_T_/favicon1.ico/route,_N_T_/favicon1.ico"
       },
       "experimentalBypassFor": [
         {
@@ -92,7 +92,7 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/favicon.ico",
+      "srcRoute": "/favicon1.ico",
       "dataRoute": null,
       "allowHeader": [
         "host",

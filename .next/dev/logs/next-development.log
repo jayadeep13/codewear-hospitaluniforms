@@ -1,11 +1,7 @@
-{"timestamp":"00:00:05.624","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:08.521","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"00:13:54.560","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"00:18:20.744","source":"Server","level":"LOG","message":"✓ Compiled in 168ms"}
-{"timestamp":"00:18:21.852","source":"Browser","level":"ERROR","message":"An empty string (\"\") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src"}
-{"timestamp":"00:18:21.852","source":"Browser","level":"ERROR","message":"Image is missing required \"src\" property: <img>"}
-{"timestamp":"00:22:55.221","source":"Server","level":"ERROR","message":"[browser] \"An empty string (\\\"\\\") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.\" \"\""}
-{"timestamp":"00:22:55.222","source":"Browser","level":"ERROR","message":"An empty string (\"\") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string. \"\""}
-{"timestamp":"00:22:55.237","source":"Server","level":"ERROR","message":"[browser] \"Image is missing required \\\"src\\\" property:\" \"[object HTMLImageElement]\" \"\""}
-{"timestamp":"00:22:55.238","source":"Browser","level":"ERROR","message":"Image is missing required \"src\" property: \"[object HTMLImageElement]\" \"\""}
-{"timestamp":"00:26:19.990","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:00:09.673","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:17.742","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"01:07:38.389","source":"Server","level":"LOG","message":"✓ Compiled in 489ms"}
+{"timestamp":"01:07:46.258","source":"Server","level":"LOG","message":"✓ Compiled in 166ms"}
+{"timestamp":"01:10:16.101","source":"Server","level":"LOG","message":"✓ Compiled in 166ms"}
+{"timestamp":"01:10:23.945","source":"Server","level":"LOG","message":"✓ Compiled in 191ms"}
+{"timestamp":"01:10:33.955","source":"Server","level":"LOG","message":"✓ Compiled in 852ms"}
