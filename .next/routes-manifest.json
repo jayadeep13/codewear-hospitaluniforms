@@ -42,7 +42,7 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
-      "page": "/favicon1.ico",
+      "page": "/favicon.ico",
       "regex": "^/favicon\\.ico(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/favicon\\.ico(?:/)?$"
